@@ -17,7 +17,20 @@ class DataPendaftaranResource extends Resource
 {
     protected static ?string $model = DataPendaftaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static ?string $navigationGroup = 'Data Murid';
+    protected static ?string $navigationLabel = 'Informasi Data murid';
+    protected static ?string $breadcrumb = 'Data Murid';
+    protected static ?string $pluralLabel = 'Data Pendaftaran Murid';
+    public static function getNavigationSort(): ?int
+    {
+        return crc32(static::getNavigationLabel()) % 100;
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
