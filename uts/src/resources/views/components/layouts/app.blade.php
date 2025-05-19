@@ -35,6 +35,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                 <li class="nav-item"><a class="nav-link" href="{{ route ('home')}}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route ('data')}}">Data Pendaftaran</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route ('about')}}">About</a></li>
             </ul>
         </div>
     </div>
@@ -46,7 +47,9 @@
     <footer class="bg-white py-4 mt-auto">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto" ><div class="small m-0"> &copy; 2025</div></div>
+                <div class="text-center">
+                    <div class="col-auto">&copy; 2025</div>
+                  </div>                  
             </div>
         </div>
     </footer>
